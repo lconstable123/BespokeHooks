@@ -14,6 +14,10 @@ I'm collating a library of useful functions and hooks.
 - `useDoubleIntersectionObserver`
 - `portal-porter.tsx`
 - `useNativeVideoPlayer`
+- `fadeInOnce`
+- `saveImageLocally`
+- `convertImage`
+- `NoSQL Lambda AWS`
 - `video Encoder` (bash script)
 
 ---
@@ -65,6 +69,16 @@ A utility to trigger Framer Motion animations safely, preventing retriggers, no 
 A screen listener, that, given three sizes, will listen, much like a css query but in hook form. good for resizing grids and arrays.
 
 The interesting thing about this one is that is is a singleton, you can call useScreenSize as many times as you want but it wall always reference the same listener, adding each 'subscriber' to an array. Saves having to build a context provider and all that.
+
+### Inputs
+
+- sm breakpoint
+- md breakpoint
+- -lg breakpoint
+
+### Output
+
+- A union of "small" | "med" | "large" | extralarge" to use with a switch
 
 ## useOptimisedVideoSource
 
@@ -120,6 +134,28 @@ A custom streaming video solution (no Vimdeo needed). Includes buffering visuali
 - `validateString`
 
 ---
+
+## fadeInOnce
+
+I created a similar effect with the `useAnimationTigger` hook but i think this is more elegant, just adding the html element to an array and giving it a key.
+
+---
+
+## saveImageLocally
+
+creates a directory and add a file. Useful for backend
+
+---
+
+## ImageConverter
+
+Uses heic2any to convert an image. Not that much personal work in this,but useful.
+
+---
+
+## graphQL-lambda
+
+Just keeping a copy of this for if I need to do severless lambda noSQL again, its a bit of a pain so useful to have this around.
 
 ## Video Encoder (Bash Script)
 
