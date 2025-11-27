@@ -56,9 +56,15 @@ It's easy enough to trigger an animation in when a component is mounted, it's th
 
 ## useAnimationTrigger
 
-A utility to trigger Framer Motion animations safely, preventing retriggers, no double anaimtions.
+A utility to trigger Framer Motion animations safely, preventing retriggers, no double animations.
 
 ---
+
+## useScreenSize
+
+A screen listener, that, given three sizes, will listen, much like a css query but in hook form. good for resizing grids and arrays.
+
+The interesting thing about this one is that is is a singleton, you can call useScreenSize as many times as you want but it wall always reference the same listener, adding each 'subscriber' to an array. Saves having to build a context provider and all that.
 
 ## useOptimisedVideoSource
 
